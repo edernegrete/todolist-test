@@ -55,7 +55,7 @@ export function ChallengeComponent() {
         gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
         gap: "16px",
        }}>
-        {columnEntries.map(([key, { id, title, taskList }], index) => (
+        {columnEntries.map(([_, { id, title, taskList }], index) => (
           <StateColumn
             key={id}
             columnIndex={index}
