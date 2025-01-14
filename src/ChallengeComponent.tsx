@@ -42,9 +42,9 @@ export function ChallengeComponent() {
     }));
   };
 
-  const handleTaskTransition = (currentIndex: number, moveIndex: number, taskIndex: number) => {
+  const handleTaskTransition = (currentIndex: number, direction: number, taskIndex: number) => {
     const fromColumn = LIST_COLUMNS[currentIndex];
-    const toColumn = LIST_COLUMNS[moveIndex];
+    const toColumn = LIST_COLUMNS[direction];
     moveTaskBetweenColumns(fromColumn, toColumn, taskIndex);
   };
 
@@ -58,10 +58,9 @@ export function ChallengeComponent() {
         {columnEntries.map(([_, { id, title, taskList }], index) => (
           <StateColumn
             key={id}
-            columnIndex={index}
             title={title}
             taskList={taskList}
-            handleTaskTransition={handleTaskTransition}
+            handleTaskTransition={(direction, taskIndex) => handleTaskTransition(index, direction, taskIndex)}
             isFirst={index === 0}
             isLast={index === columnEntries.length - 1}
           />

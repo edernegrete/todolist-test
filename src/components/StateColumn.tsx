@@ -4,22 +4,20 @@ import {StateColumnItem} from './StateColumnItem'
 type StateColumnPropsType = {
   title: string;
   taskList: string[];
-  columnIndex: number;
   isFirst: boolean;
   isLast: boolean;
-  handleTaskTransition: (currentIndex: number, moveIndex: number, elementIndex: number) => void;
+  handleTaskTransition: (direction: number, taskIndex: number) => void;
 }
 export const StateColumn = ({
   title,
   taskList,
   handleTaskTransition,
-  columnIndex,
   isFirst,
   isLast,
 }: StateColumnPropsType) => {
 
   const createMoveHandler = (direction: number) => (taskIndex: number) => {
-    handleTaskTransition(columnIndex, columnIndex + direction, taskIndex);
+    handleTaskTransition(direction, taskIndex);
   };
 
   const handleMoveLeft = createMoveHandler(-1);
