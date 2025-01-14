@@ -19,10 +19,6 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository to your local machine:
 
-   ```bash
-    git clone [TODO]
-    cd challenge-component
-
 2. Install dependencies:
 
    ```bash
