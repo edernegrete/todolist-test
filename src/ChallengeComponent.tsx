@@ -44,7 +44,7 @@ export function ChallengeComponent() {
 
   const handleTaskTransition = (currentIndex: number, direction: number, taskIndex: number) => {
     const fromColumn = LIST_COLUMNS[currentIndex];
-    const toColumn = LIST_COLUMNS[direction];
+    const toColumn = LIST_COLUMNS[currentIndex + direction];
     moveTaskBetweenColumns(fromColumn, toColumn, taskIndex);
   };
 
