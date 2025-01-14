@@ -43,7 +43,7 @@ export const StateColumn = ({
         }}
       >
         {taskList.map((task, index) => (
-          <li key={index} style={{ marginBottom: "8px" }}>
+          <li key={`${index}-item-list`} style={{ marginBottom: "8px" }}>
             <StateColumnItem
               task={task}
               handleMoveLeft={() => handleMoveLeft(index)}
