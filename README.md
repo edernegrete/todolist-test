@@ -7,6 +7,8 @@
 - Move tasks between columns (e.g., To-Do → In Progress → Done).
 - Responsive layout that adjusts to different screen sizes.
 - Simple and easy-to-understand user interface.
+## DEMO
+https://github.com/user-attachments/assets/aed63415-18e7-4e93-a0a6-dd13f0184e55
 
 ## Installation
 
@@ -32,7 +34,4 @@ Ensure you have the following installed on your machine:
     # OR
     yarn start
 
-DEMO:
-
-https://github.com/user-attachments/assets/aed63415-18e7-4e93-a0a6-dd13f0184e55
 
